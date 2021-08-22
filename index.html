@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bách Mộc Care</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon" sizes="32x32" />
+    <link rel="preload" href="./css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="./css/slick.css" as="style">
+    <link rel="preload" href="./css/slick-theme.css" as="style">
+    <link rel="preload" href="./css/style.min.css" as="style">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="preload" as="script" href="./js/jquery.min.js" />
+    <link rel="preload" as="script" href="./js/popper.min.js" />
+    <link rel="preload" as="script" href="./js/bootstrap.min.js" />
+    <link rel="preload" as="script" href="./js/slick.min.js" />
+    <link rel="preload" as="script" href="./js/jquery.lazy.min.js" />
+    <link rel="preload" as="script" href="./js/common.js" />
+    <link rel="preload" as="script" href="./js/countdown.js" />
+    <link rel="preload" href="./css/fonts/slick.woff" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/Roboto-Bold.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/Roboto-Regular.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./assets/fonts/Roboto-Medium.ttf" as="font" crossorigin="anonymous">
+    <script type="text/javascript" async>
+        function writeCookie(name, value, days) {
+            var date, expires;
+            if (days) {
+                date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var i,
+                c,
+                ca,
+                nameEQ = name + "=";
+            ca = document.cookie.split(";");
+            for (i = 0; i < ca.length; i++) {
+                c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ?
+                "" :
+                decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var utm_source = getParameterByName("utm_source");
+        var utm_medium = getParameterByName("utm_medium");
+        var utm_campaign = getParameterByName("utm_campaign");
+        var utm_term = getParameterByName("utm_term");
+        var utm_content = getParameterByName("utm_content");
+
+        if (utm_source != "") {
+            writeCookie("utm_source", utm_source, 30);
+            writeCookie("utm_medium", utm_medium, 30);
+            writeCookie("utm_campaign", utm_campaign, 30);
+            writeCookie("utm_term", utm_term, 30);
+            writeCookie("utm_content", utm_content, 30);
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script async>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MTZ7KNN');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="110">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZ7KNN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
+        <div class="phonering-alo-ph-circle"></div>
+        <div class="phonering-alo-ph-circle-fill"></div>
+        <a href="tel:+84877441441" class="pps-btn-img" title="Liên hệ">
+            <div class="phonering-alo-ph-img-circle"></div>
+        </a>
+    </div>
+    <div class="btn_top">
+        Tư vấn
+    </div>
+    <header class="fixed-top">
+        <div class="logo d-none d-sm-none d-md-block">
+            <figure>
+                <img src="./assets/images/logo.svg" alt="Logo" class="img-fluid d-block mx-auto" />
+            </figure>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand d-block d-sm-block d-md-none" href="#">
+                    <figure>
+                        <img src="./assets/images/logo.svg" alt="Logo" class="img-fluid mx-auto lazy" />
+                    </figure>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link active" href="#trangchu">
+                                TRANG CHỦ
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#hauqua">
+                                HẬU QUẢ
+                            </a>
+                        </li> -->
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#tacdung">
+                                TÁC DỤNG
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#chungnhan">
+                                LÝ DO CHỌN
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#camnhan">
+                                CẢM NHẬN
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#form-ft">
+                                ĐẶT HÀNG
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#daily">
+                                ĐĂNG KÝ ĐẠI LÝ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="trangchu">
+            <div class="container-fluid">
+                <!-- <div class="row">
+                    <div class="col-12 pad0">
+                        <figure>
+                            <img src="./assets/images/bg_header.jpg" alt="San pham" class="img-fluid mx-auto">
+                        </figure>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="bg_xanh">
+                            <div class="title">
+                                <p>
+                                    Trị mồ hôi nách<span></span> tại nhà
+                                </p>
+                            </div>
+                            <div class="countdown">
+                                <div>
+                                    <div>
+                                        <p>Giờ</p>
+                                        <div id="hour"></div>
+                                    </div>
+                                    <div>
+                                        <p>Phút</p>
+                                        <div id="minute"></div>
+                                    </div>
+                                    <div>
+                                        <p>Giây</p>
+                                        <div id="second"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                THỜI GIAN KHUYẾN MÃI CÓ HẠN <br />
+                                NHANH TAY ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI
+                            </p>
+                            <form>
+                                <p class="form-title">
+                                    Đăng ký nhận tư vấn
+                                    và mua hàng
+                                </p>
+                                <input type="tel" id="phone" class="field_input" placeholder="Số điện thoại">
+                                <button type="button" id="Form_1" class="field_register" onclick="kiemtra()">
+                                    <div>Tôi muốn nhận tư vấn</div>
+                                    <div class="lds-ring">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="above">
+                            <p class="giagoc">
+                                Giá gốc: 320.000Đ
+                            </p>
+                            <div class="promo-price hvr-pulse">
+                                180.000Đ
+                            </div>
+                            <p>
+                                MUA 2 SẢN PHẨM GIÁ
+                            </p>
+                            <div class="gia_2sp">
+                                280.000Đ
+                            </div>
+                        </div>
+                        <div class="dangky page-scroll">
+                            <a href="#trangchu">MUA NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="hauqua">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title">
+                            <figure>
+                                <img data-src="./assets/images/flower.svg" alt="Flower"
+                                    class="img-fluid d-block mx-auto lazy">
+                            </figure>
+                            <p>
+                                Hôi nách - Hôi chân <br />
+                                cản trở cuộc sống của bạn
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/nguyennhan1.png" alt="Nguyên nhân 1"
+                                class="img-fluid d-block mx-auto w-100 lazy" />
+                            <figcaption>
+                                Mất tự tin khi giao tiếp
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/nguyennhan2.png" alt="Nguyên nhân 2"
+                                class="img-fluid d-block mx-auto w-100 lazy" />
+                            <figcaption>
+                                Nách ướt làm ố màu áo
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/nguyennhan3.png" alt="Nguyên nhân 3"
+                                class="img-fluid d-block mx-auto w-100 lazy" />
+                            <figcaption>
+                                Gây khó chịu cho người xung quanh
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/nguyennhan4.png" alt="Nguyên nhân 4"
+                                class="img-fluid d-block mx-auto w-100 lazy" />
+                            <figcaption>
+                                Ảnh hưởng công việc, sức khoẻ, tình duyên
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="thongtin">
+                            <ul>
+                                <li>Mồ Hôi Nách cũng không phải là bệnh nguy hiểm, bởi nó không gây hại cho sức khỏe con
+                                    người. Nhưng bệnh lại là một trong những nguyên nhân gây cản trở giao tiếp xã hội
+                                    của
+                                    người bệnh. Trên thực tế, đã có rất nhiều trường hợp rơi vào tình trạng tự kỷ, trầm
+                                    cảm,
+                                    mất việc,… vì bị xa lánh. Thậm chí có người còn tự tử chỉ vì mùi hôi nách quá nặng.
+                                </li>
+
+                                <li>Mất đi sự tự tin, khiến bản thân thấy mặc cảm, tự ti & ngại giao tiếp với bạn bè
+                                    đồng
+                                    nghiệp. Đánh mất đi các cơ hội trong công việc và cuộc sống.</li>
+
+                                <li>Gây ảnh hưởng đến người xung quanh, dễ bị mọi người xa lánh, kỳ thị... gây ấn tượng
+                                    xấu
+                                    với bạn khác giới.</li>
+
+                                <li>Dễ di truyền lại bệnh cho con cái, tăng khả năng mắc các bệnh về nấm da, dễ bị trầm
+                                    cảm,
+                                    stress..</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dangky page-scroll">
+                            <a href="#trangchu">NHẬN ƯU ĐÃI NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tacdung">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-2 my-auto">
+                        <div class="title">
+                            <figure>
+                                <img loading="lazy" data-src="./assets/images/flower_and_product.png"
+                                    alt="Flower and Product" class="img-fluid d-block lazy">
+                            </figure>
+                            <p>
+                                Với các thành phần <br />
+                                từ thiên nhiên:
+                            </p>
+                        </div>
+                        <ul>
+                            <li>Phèn phi: Giải độc, sát trùng, khử mùi hôi</li>
+                            <li>Quế hồi: Ngăn tiết mồ hôi</li>
+                            <li>Bách Mộc Hương: Tạo mùi thơm tự nhiên, dễ chịu</li>
+                            <li>Đinh Hương: Chứa tinh dầu có tính sát trùng</li>
+                            <li>Hoa Nhài: Có mùi thơm dễ chịu, làm se lỗ chấn lông, làm trắng da</li>
+                        </ul>
+                        <div class="title">
+                            <p>
+                                Bách Mộc giúp:
+                            </p>
+                        </div>
+                        <ul>
+                            <li>Giảm tình trạng tăng tiết mồ hôi dưới da</li>
+                            <li>Giúp thu nhỏ lỗ chân lông</li>
+                            <li>Tiêu diệt vi khuẩn ký sinh gây mùi</li>
+                            <li>Làm khô dầu trên da, ngăn cản tình trạng ướt áo</li>
+                            <li>Mùi hương tự nhiên, dễ chịu từ thành phần thảo mộc</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 my-auto">
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/thanhphan_hinh.png" alt="Thành phần"
+                                class="img-fluid d-block w-100 lazy">
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dangky page-scroll">
+                            <a href="#trangchu">NHẬN ƯU ĐÃI NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="chungnhan">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1 order-2 order-sm-2 order-md-1">
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/chungnhan_hinh.png" alt="Thành phần"
+                                class="img-fluid d-block w-100 lazy">
+                        </figure>
+                    </div>
+                    <div class="col-lg-5 my-auto order-1 order-sm-1 order-md-2 my-auto">
+                        <div class="title">
+                            <figure>
+                                <img loading="lazy" data-src="./assets/images/flower_and_product.png"
+                                    alt="Flower and Product" class="img-fluid d-block lazy">
+                            </figure>
+                            <p>
+                                Tại sao nên chọn Bách Mộc ?
+                            </p>
+                        </div>
+                        <p>
+                            Mồ Hôi nách, hôi chân gây ra 1 số ảnh hưởng đến sức khỏe như dễ gây ra các bệnh về da (viêm
+                            da, chàm, nấm) do hiện tượng tăng tiết mồ hôi, người bị hôi nách thường hay bị viêm nang
+                            lông, viêm da dị ứng, nách thường xuyên bị ố, thâm.( hình ảnh ).
+                        </p>
+                        <figure>
+                            <img loading="lazy" data-src="./assets/images/tuyenmohoi.png" alt="Tuyến mồ hôi"
+                                class="img-fluid d-block lazy">
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <p>
+                            Bên cạnh đó hôi nách, hôi chân ảnh hưởng không nhỏ đến tâm lý và cuộc sống của người bệnh.
+                            Những người bị hôi nách, hôi chân thường có tâm lý e ngại, xấu hổ, tự ti, sống khép kín,
+                            không dám giao tiếp, ngại tiếp xúc với người khác do lo lắng về mùi hôi khó chịu. Từ đó mà
+                            cuộc sống trở nên bế tắc, mặc cảm.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="thongtin">
+                            <div class="title">
+                                <p>
+                                    GIẢI PHÁP
+                                </p>
+                            </div>
+                            <p>
+                                Hiện nay, có rất nhiều phương pháp trị hôi nách khác nhau tuy nhiên hầu hết các phương
+                                pháp chỉ dừng lại ở việc ngăn mùi mang tính tạm thời đối phó nên các phương pháp này
+                                phải dùng liên tục cứ dừng là mùi hôi lại quay trở lại. Một số phương pháp hiện đại như
+                                phẫu thuật, hút li tâm cho hiệu quả nhanh tuy nhiên lại tốn kém và làm mất cân bằng việc
+                                bài tiết mồ hôi của cơ thể gây nên hiện tượng tiết mồ hôi khó kiểm soát tại các vị trí
+                                khác gây phiền toái không hề nhẹ.
+                            </p>
+                            <p>
+                                Giải pháp BÁCH MỘC là xà phòng thảo dược đặc trị hôi nách, được làm từ 100% từ thiên
+                                nhiên giúp diệt khuẩn, hạn chế hoạt động của chúng trên các tuyến mồ hôi, loại trừ mùi
+                                hôi khó chịu do vi khuẩn gây ra, sạch mùi triệt để sau lần sử dụng đầu tiên.
+                            </p>
+                            <ul>
+                                <li>
+                                    Sản phẩm đặc trị mồ hôi nách an toàn. Ai cũng có thể dùng được, đặc biệt cho da nhạy
+                                    cảm, vùng nách ẩm ướt, phụ nữ sau sinh, tuổi dậy thì.
+                                </li>
+                                <li>
+                                    Hiệu quả bất ngờ sau vài lần sử dụng, sạch mùi, khô ráo cảm giác tự tin tràn đầy.
+                                </li>
+                                <li>
+                                    Không gây thâm da, vàng ố vùng da, không kích ứng da.
+                                </li>
+                                <li>
+                                    Giúp se khít lỗ chân lông, mờ vết thâm sạm sau 02 tuần sử dụng.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dangky page-scroll">
+                            <a href="#form-ft">NHẬN ƯU ĐÃI NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="choose">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-2 my-auto">
+                        <div class="title">
+                            <figure>
+                                <img loading="lazy" data-src="./assets/images/flower_and_product.png"
+                                    alt="Flower and Product" class="img-fluid d-block lazy">
+                            </figure>
+                            <p>
+                                Chọn Bách Mộc <br />
+                                Chọn sự tin yêu và đồng hành
+                            </p>
+                        </div>
+                        <ul>
+                            <li>Lắng nghe tình trạng bạn đang gặp phải.</li>
+                            <li>Tư vấn liệu trình sản phẩm phù hợp, đưa ra một số giải pháp phù hợp với tình trạng mùi
+                                hôi của bạn để tăng hiệu quả khi sử dụng sản phẩm.
+                            </li>
+                            <li>Nhận phản hồi và đồng hành chia sẻ, tư vấn cùng bạn trong suốt quá trình sử dụng sản
+                                phẩm</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <!-- <figure>
+                            <img loading="lazy" data-src="./assets/images/choose_hinh.png" alt="Chọn Bách Mộc"
+                                class="img-fluid d-block w-100 lazy">
+                        </figure> -->
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Z-dS2jJadyE?rel=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-2 col-12">
+                        <div class="thongtin">
+                            <div class="title">
+                                <p>
+                                    Hướng dẫn sử dụng
+                                </p>
+                            </div>
+                            <ul>
+                                <li>
+                                    Bước 1: Vệ sinh cơ thể hay ra mồ hôi/vùng da dưới cánh tay sạch sẽ
+                                </li>
+                                <li>
+                                    Bước 2: dùng xa phòng massage nhẹ nhàng
+                                </li>
+                                <li>
+                                    Bước 3: Tắm lại bằng nước sạch
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dangky page-scroll">
+                            <a href="#form-ft">NHẬN ƯU ĐÃI NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="camnhan">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="slider">
+                            <div>
+                                <figure>
+                                    <img loading="lazy" data-src="./assets/images/camnhan1.png" alt="Cảm nhận 1"
+                                        class="img-fluid d-block mx-auto lazy" />
+                                </figure>
+                                <p>
+                                    Là nhân viên văn phòng, hàng ngày phải mang giày và mặc sơ mi trắng khiến cho mùi cơ
+                                    thể ngày càng nặng, làm cho mình rất ngại tiếp xúc với khách hàng. Một hôm được đồng
+                                    nghiệp giới thiệu bộ sản phẩm của Bách Mộc, mình đặt mua về dùng thử. Sau 1liệu
+                                    trình sử dụng là mùi hôi giảm đi rõ rệt . Hi vọng dùng xong liệu trình thì sẽ hết
+                                    hẳn và không tái lại nữa.
+                                </p>
+                                <p>
+                                    <span>Chị Lan Phương, Hà Nội</span>
+                                </p>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img loading="lazy" data-src="./assets/images/camnhan2.png" alt="Cảm nhận 2"
+                                        class="img-fluid d-block mx-auto lazy" />
+                                </figure>
+                                <p>
+                                    Trước đây mình đã thử rất nhiều cách để giúp khắc phục tình trạng “viêm cánh” nhưng
+                                    đều cho có tác dụng nhất thời, có khi còn nặng hơn. Được một người bạn mách sử dụng
+                                    bộ sản phẩm của Bách Mộc, mình cũng dùng thử và đã thấy hiệu quả ngay lần đầu. Kiên
+                                    trì sử dụng khoảng 3 liệu trình thì mùi hôi đã không xuất hiện nữa. Giờ mình đã tự
+                                    tin diện áo ngắn tay để đi chơi với bạn bè mà không sợ mùi cơ thể nữa. Cảm ơn Bách
+                                    Mộc nhiều nhé!
+                                </p>
+                                <p>
+                                    <span>Chị Lệ Quyên, Hồ Chí Minh</span>
+                                </p>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img loading="lazy" data-src="./assets/images/camnhan3.png" alt="Cảm nhận 3"
+                                        class="img-fluid d-block mx-auto lazy" />
+                                </figure>
+                                <p>
+                                    Đã từng sử dụng qua nhiều loại lăn nách, khử mùi, nhưng hiệu quả đều không như kỳ
+                                    vọng, bản thân cũng rất ngượng ngùng khi tiếp xúc với phụ nữ do mùi cơ thể. Đến khi
+                                    được bạn nữ tặng cho bộ sản phẩm của Bách Mộc thì sử dụng thấy rất ưng ý. Đã dùng
+                                    qua 2 lần, và hiệu quả mang lại rõ rệt.
+                                </p>
+                                <p>
+                                    <span>Anh Quốc Trường, Hồ Chí Minh</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dangky page-scroll">
+                            <a href="#form-ft">NHẬN ƯU ĐÃI NGAY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="bg_ft_full">
+            <section id="form-ft">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-5 offset-lg-1  my-auto">
+                            <figure>
+                                <img loading="lazy" data-src="./assets/images/form-ft-hinh.png" alt="Footer hinh"
+                                    class="img-fluid d-block mx-auto lazy">
+                            </figure>
+                        </div>
+                        <div class="col-lg-5 my-auto">
+                            <form>
+                                <p class="form-title">
+                                    Đăng ký nhận tư vấn
+                                    và mua hàng
+                                </p>
+                                <!-- <input type="text" id="fullname_ft" class="field_input" placeholder="Họ tên"> -->
+                                <input type="tel" id="phone_ft" class="field_input" placeholder="Số điện thoại">
+                                <!-- <input type="text" id="status_ft" class="field_input"
+                                placeholder="Tình trạng hiện tại của bạn"> -->
+                                <button type="button" id="Form_2" class="field_register" onclick="kiemtra_ft()">
+                                    <div>Tôi muốn nhận tư vấn</div>
+                                    <div class="lds-ring">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </button>
+                            </form>
+                            <div class="slogan-ft">
+                                <p>
+                                    Bách Mộc giúp bạn tự tin ngay hôm nay!
+                                </p>
+                                <div class="thongtin">
+                                    <ul>
+                                        <li>
+                                            Không còn mùi hôi ngay lần đầu sử dụng.
+                                        </li>
+                                        <li>
+                                            Vùng da vùng nách không còn thâm và đen.
+                                        </li>
+                                        <li>
+                                            Vùng nách khô thoáng tự tin giao tiếp.
+                                        </li>
+                                        <li>
+                                            Mùi hương dịu nhẹ,sang trọng suốt cả ngày
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1">
+                            <div class="chuong-trinh-km">
+                                <p>
+                                    Chương Trình Khuyến mãi
+                                </p>
+                                <div class="hvr-pulse">
+                                    Mua 2 sản phẩm giá <strong>280.000đ</strong>
+                                </div>
+                                <div>
+                                    NHANH TAY ĐẶT HÀNG CHƯƠNG TRÌNH KHUYẾN MÃI CÓ HẠN
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section id="daily">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4 offset-lg-1 my-auto order-2 order-sm-2 order-md-1">
+                            <form>
+                                <p class="form-title">
+                                    Đăng ký LÀM ĐẠI LÝ
+                                </p>
+                                <input type="text" id="fullname_daily" class="field_input" placeholder="Họ tên">
+                                <input type="tel" id="phone_daily" class="field_input" placeholder="Số điện thoại">
+                                <input type="hidden" id="daily" value="Đại lý">
+                                <button type="button" id="field_register_daily" class="field_register"
+                                    onclick="kiemtra_daily()">
+                                    <div>ĐĂNG KÝ NGAY</div>
+                                    <div class="lds-ring">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1 my-auto order-1 order-sm-1 order-md-2">
+                            <div class="title">
+                                <figure>
+                                    <img loading="lazy" data-src="./assets/images/cooperation.png" alt="Hợp tác"
+                                        class="img-fluid d-block lazy">
+                                </figure>
+                                <p>
+                                    Ưu Đãi Lớn khi trở thành đại lý của Bách Mộc
+                                </p>
+                            </div>
+                            <ul>
+                                <li>Được trợ giá tối đa</li>
+                                <li>Ưu đãi về chính sách công nợ
+                                </li>
+                                <li>Được hỗ trợ về marketing</li>
+                                <li>Miễn phí vẫn chuyển</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="custom-social-proof">
+            <div class="custom-notification">
+                <div class="custom-notification-container">
+                    <div class="custom-notification-image-wrapper">
+                        <img src="">
+                    </div>
+                    <div class="custom-notification-content-wrapper">
+                        <p class="custom-notification-content">
+                            <strong></strong><br />
+                            <small>Đã mua hàng</small>
+                            <small>1 phút trước</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>
+                        <strong>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ BÁCH MỘC</strong> <br />
+                        Địa chỉ: 232/14 Tô Hiệu, Phường Hiệp Tân, Quận Tân phú, TP Hồ Chí Minh
+                    </p>
+                    <p>
+                        Mã số thuế:0312155471
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/jquery.min.js" defer></script>
+    <script type="text/javascript" src="./js/popper.min.js" defer></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js" defer></script>
+    <script type="text/javascript" src="./js/slick.min.js" defer></script>
+    <script type="text/javascript" src="./js/jquery.lazy.min.js" defer></script>
+    <script type="text/javascript" src="./js/countdown.js" defer></script>
+    <script type="text/javascript" src="./js/common.js?v=3" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "399002ff-7924-479d-b55a-a159706a6585",
+            });
+        });
+    </script>
+</body>
+
+</html>
